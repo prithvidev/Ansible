@@ -1,0 +1,2 @@
+httpd_install_path: "/home/ansible/inst1"
+httpd_version: "2.4.63"  # Change to the latest version if needed

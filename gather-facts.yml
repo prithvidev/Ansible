@@ -1,0 +1,8 @@
+---
+- name: Print gathered facts
+  hosts: Node1
+  gather_facts: yes
+  tasks:
+    - name: Show all gathered facts
+      debug:
+        var: ansible_os_family

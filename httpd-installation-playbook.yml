@@ -1,0 +1,7 @@
+---
+- name: HTTPD Installation Playbook
+  hosts: all
+  remote_user: ansible
+  become: yes  # Ensures sudo privileges for package installation
+  roles:
+    - httpd-installation

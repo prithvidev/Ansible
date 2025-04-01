@@ -1,0 +1,1310 @@
+2025-03-30 11:49:16,054 p=24700 u=ansible n=ansible |   hosts (2):
+2025-03-30 11:49:16,054 p=24700 u=ansible n=ansible |     172.31.26.181
+2025-03-30 11:49:16,054 p=24700 u=ansible n=ansible |     172.31.25.224
+2025-04-01 08:56:07,156 p=10614 u=ansible n=ansible | PLAY [Example Ansible playbook] **********************************************************************************************
+2025-04-01 08:56:07,178 p=10614 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************
+2025-04-01 08:56:09,425 p=10614 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 08:56:09,426 p=10614 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 08:56:09,429 p=10614 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 08:56:09,429 p=10614 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 08:56:09,434 p=10614 u=ansible n=ansible | TASK [python : installing packages for python env] ***************************************************************************
+2025-04-01 08:56:34,908 p=10614 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 08:56:43,295 p=10614 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 08:56:43,302 p=10614 u=ansible n=ansible | TASK [python : Creates directory] ********************************************************************************************
+2025-04-01 08:56:43,758 p=10614 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 08:56:43,782 p=10614 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 08:56:43,788 p=10614 u=ansible n=ansible | TASK [python : install apache2] **********************************************************************************************
+2025-04-01 08:56:45,896 p=10614 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 08:56:46,016 p=10614 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 08:56:46,027 p=10614 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************
+2025-04-01 08:56:46,028 p=10614 u=ansible n=ansible | 172.31.25.224              : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 08:56:46,028 p=10614 u=ansible n=ansible | 172.31.26.181              : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 08:58:13,440 p=11033 u=ansible n=ansible | PLAY [Example Ansible playbook] **********************************************************************************************
+2025-04-01 08:58:13,449 p=11033 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************
+2025-04-01 08:58:15,511 p=11033 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 08:58:15,512 p=11033 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 08:58:15,570 p=11033 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 08:58:15,571 p=11033 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 08:58:15,576 p=11033 u=ansible n=ansible | TASK [python : installing packages for python env] ***************************************************************************
+2025-04-01 08:58:17,904 p=11033 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 08:58:17,910 p=11033 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 08:58:17,916 p=11033 u=ansible n=ansible | TASK [python : Creates directory] ********************************************************************************************
+2025-04-01 08:58:18,394 p=11033 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 08:58:18,398 p=11033 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 08:58:18,406 p=11033 u=ansible n=ansible | TASK [python : install apache2] **********************************************************************************************
+2025-04-01 08:58:20,568 p=11033 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 08:58:20,606 p=11033 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 08:58:20,617 p=11033 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************
+2025-04-01 08:58:20,618 p=11033 u=ansible n=ansible | 172.31.25.224              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 08:58:20,618 p=11033 u=ansible n=ansible | 172.31.26.181              : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 09:53:00,083 p=13469 u=ansible n=ansible | ERROR! conflicting action statements: hosts, tasks
+
+The error appears to be in '/etc/ansible/roles/httpd-installation/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Install and Configure HTTPD in Custom Path
+  ^ here
+
+2025-04-01 09:54:11,048 p=13922 u=ansible n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/etc/ansible/roles/httpd-installation/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Install and Configure HTTPD in Custom Path
+  ^ here
+
+2025-04-01 09:56:09,070 p=14646 u=ansible n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/etc/ansible/roles/httpd-installation/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Install and Configure HTTPD in Custom Path
+  ^ here
+
+2025-04-01 09:58:04,103 p=15345 u=ansible n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/etc/ansible/roles/httpd-installation/tasks/main.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Install and Configure HTTPD in Custom Path
+  ^ here
+
+2025-04-01 10:00:43,596 p=16339 u=ansible n=ansible | ERROR! unexpected parameter type in action: <class 'ansible.parsing.yaml.objects.AnsibleSequence'>
+
+The error appears to be in '/etc/ansible/roles/httpd-installation/tasks/main.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Install and Configure HTTPD in Custom Path
+  ^ here
+
+2025-04-01 11:58:04,275 p=29987 u=ansible n=ansible | ERROR! the playbook: httpd-installation-playbook.yml could not be found
+2025-04-01 11:58:14,949 p=30060 u=ansible n=ansible | ERROR! conflicting action statements: package, state
+
+The error appears to be in '/etc/ansible/roles/httpd-installation/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Install required dependencies
+  ^ here
+
+2025-04-01 12:00:24,856 p=30850 u=ansible n=ansible | ERROR! conflicting action statements: package, state
+
+The error appears to be in '/etc/ansible/roles/httpd-installation/tasks/main.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Install required dependencies
+  ^ here
+
+2025-04-01 12:04:59,274 p=32862 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************
+2025-04-01 12:04:59,292 p=32862 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************
+2025-04-01 12:05:01,524 p=32862 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:05:01,524 p=32862 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:05:01,530 p=32862 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:05:01,531 p=32862 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:05:01,537 p=32862 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies] ********************************************************************
+2025-04-01 12:05:02,545 p=32862 u=ansible n=ansible | fatal: [172.31.25.224]: FAILED! => {"changed": false, "msg": "No package matching 'apr' is available"}
+2025-04-01 12:05:02,573 p=32862 u=ansible n=ansible | fatal: [172.31.26.181]: FAILED! => {"changed": false, "msg": "No package matching 'apr' is available"}
+2025-04-01 12:05:02,575 p=32862 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************
+2025-04-01 12:05:02,576 p=32862 u=ansible n=ansible | 172.31.25.224              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:05:02,576 p=32862 u=ansible n=ansible | 172.31.26.181              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:27:46,740 p=41150 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************
+2025-04-01 12:27:46,749 p=41150 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************
+2025-04-01 12:27:48,759 p=41150 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:27:48,760 p=41150 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:27:48,785 p=41150 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:27:48,785 p=41150 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:27:48,794 p=41150 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies (RedHat-based)] *****************************************************
+2025-04-01 12:27:48,818 p=41150 u=ansible n=ansible | skipping: [172.31.26.181]
+2025-04-01 12:27:48,825 p=41150 u=ansible n=ansible | skipping: [172.31.25.224]
+2025-04-01 12:27:48,830 p=41150 u=ansible n=ansible | TASK [httpd-installation : Download Apache HTTPD source code] ****************************************************************
+2025-04-01 12:27:49,730 p=41150 u=ansible n=ansible | fatal: [172.31.25.224]: FAILED! => {"changed": false, "dest": "/tmp/httpd-2.4.58.tar.gz", "elapsed": 0, "msg": "Request failed", "response": "HTTP Error 404: Not Found", "status_code": 404, "url": "https://downloads.apache.org/httpd/httpd-2.4.58.tar.gz"}
+2025-04-01 12:27:49,734 p=41150 u=ansible n=ansible | fatal: [172.31.26.181]: FAILED! => {"changed": false, "dest": "/tmp/httpd-2.4.58.tar.gz", "elapsed": 0, "msg": "Request failed", "response": "HTTP Error 404: Not Found", "status_code": 404, "url": "https://downloads.apache.org/httpd/httpd-2.4.58.tar.gz"}
+2025-04-01 12:27:49,736 p=41150 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************
+2025-04-01 12:27:49,737 p=41150 u=ansible n=ansible | 172.31.25.224              : ok=1    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-04-01 12:27:49,737 p=41150 u=ansible n=ansible | 172.31.26.181              : ok=1    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-04-01 12:30:12,904 p=42143 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************
+2025-04-01 12:30:12,912 p=42143 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************
+2025-04-01 12:30:14,937 p=42143 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:30:14,939 p=42143 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:30:14,967 p=42143 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:30:14,968 p=42143 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:30:14,973 p=42143 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies (RedHat-based)] *****************************************************
+2025-04-01 12:30:14,997 p=42143 u=ansible n=ansible | skipping: [172.31.26.181]
+2025-04-01 12:30:15,005 p=42143 u=ansible n=ansible | skipping: [172.31.25.224]
+2025-04-01 12:30:15,012 p=42143 u=ansible n=ansible | TASK [httpd-installation : Download Apache HTTPD source code] ****************************************************************
+2025-04-01 12:30:47,135 p=42143 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 12:30:47,169 p=42143 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 12:30:47,177 p=42143 u=ansible n=ansible | TASK [httpd-installation : Extract Apache source code] ***********************************************************************
+2025-04-01 12:30:49,245 p=42143 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 12:30:49,276 p=42143 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 12:30:49,283 p=42143 u=ansible n=ansible | TASK [httpd-installation : Configure Apache for custom installation] *********************************************************
+2025-04-01 12:30:50,101 p=42143 u=ansible n=ansible | fatal: [172.31.26.181]: FAILED! => {"changed": true, "cmd": ["./configure", "--prefix=/home/ansible/inst1", "--enable-mods-shared=all"], "delta": "0:00:00.387268", "end": "2025-04-01 12:30:50.060359", "msg": "non-zero return code", "rc": 1, "start": "2025-04-01 12:30:49.673091", "stderr": "configure: error: APR not found.  Please read the documentation.", "stderr_lines": ["configure: error: APR not found.  Please read the documentation."], "stdout": "checking for chosen layout... Apache\nchecking for working mkdir -p... yes\nchecking for grep that handles long lines and -e... /usr/bin/grep\nchecking for egrep... /usr/bin/grep -E\nchecking build system type... x86_64-pc-linux-gnu\nchecking host system type... x86_64-pc-linux-gnu\nchecking target system type... x86_64-pc-linux-gnu\nconfigure: \nconfigure: Configuring Apache Portable Runtime library...\nconfigure: \nchecking for APR... no", "stdout_lines": ["checking for chosen layout... Apache", "checking for working mkdir -p... yes", "checking for grep that handles long lines and -e... /usr/bin/grep", "checking for egrep... /usr/bin/grep -E", "checking build system type... x86_64-pc-linux-gnu", "checking host system type... x86_64-pc-linux-gnu", "checking target system type... x86_64-pc-linux-gnu", "configure: ", "configure: Configuring Apache Portable Runtime library...", "configure: ", "checking for APR... no"]}
+2025-04-01 12:30:50,117 p=42143 u=ansible n=ansible | fatal: [172.31.25.224]: FAILED! => {"changed": true, "cmd": ["./configure", "--prefix=/home/ansible/inst1", "--enable-mods-shared=all"], "delta": "0:00:00.388370", "end": "2025-04-01 12:30:50.075588", "msg": "non-zero return code", "rc": 1, "start": "2025-04-01 12:30:49.687218", "stderr": "configure: error: APR not found.  Please read the documentation.", "stderr_lines": ["configure: error: APR not found.  Please read the documentation."], "stdout": "checking for chosen layout... Apache\nchecking for working mkdir -p... yes\nchecking for grep that handles long lines and -e... /usr/bin/grep\nchecking for egrep... /usr/bin/grep -E\nchecking build system type... x86_64-pc-linux-gnu\nchecking host system type... x86_64-pc-linux-gnu\nchecking target system type... x86_64-pc-linux-gnu\nconfigure: \nconfigure: Configuring Apache Portable Runtime library...\nconfigure: \nchecking for APR... no", "stdout_lines": ["checking for chosen layout... Apache", "checking for working mkdir -p... yes", "checking for grep that handles long lines and -e... /usr/bin/grep", "checking for egrep... /usr/bin/grep -E", "checking build system type... x86_64-pc-linux-gnu", "checking host system type... x86_64-pc-linux-gnu", "checking target system type... x86_64-pc-linux-gnu", "configure: ", "configure: Configuring Apache Portable Runtime library...", "configure: ", "checking for APR... no"]}
+2025-04-01 12:30:50,119 p=42143 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************
+2025-04-01 12:30:50,119 p=42143 u=ansible n=ansible | 172.31.25.224              : ok=3    changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-04-01 12:30:50,119 p=42143 u=ansible n=ansible | 172.31.26.181              : ok=3    changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-04-01 12:33:34,883 p=43478 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************************
+2025-04-01 12:33:34,891 p=43478 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************
+2025-04-01 12:33:36,980 p=43478 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:33:36,982 p=43478 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:33:36,993 p=43478 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:33:36,994 p=43478 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:33:37,005 p=43478 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies (RedHat-based)] *****************************************************************
+2025-04-01 12:33:37,564 p=43478 u=ansible n=ansible | fatal: [172.31.26.181]: FAILED! => {"ansible_facts": {"pkg_mgr": "apt"}, "changed": false, "msg": ["Could not detect which major revision of dnf is in use, which is required to determine module backend.", "You should manually specify use_backend to tell the module whether to use the dnf4 or dnf5 backend})"]}
+2025-04-01 12:33:37,583 p=43478 u=ansible n=ansible | fatal: [172.31.25.224]: FAILED! => {"ansible_facts": {"pkg_mgr": "apt"}, "changed": false, "msg": ["Could not detect which major revision of dnf is in use, which is required to determine module backend.", "You should manually specify use_backend to tell the module whether to use the dnf4 or dnf5 backend})"]}
+2025-04-01 12:33:37,586 p=43478 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************
+2025-04-01 12:33:37,586 p=43478 u=ansible n=ansible | 172.31.25.224              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:33:37,586 p=43478 u=ansible n=ansible | 172.31.26.181              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:34:12,871 p=43763 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************************
+2025-04-01 12:34:12,879 p=43763 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************
+2025-04-01 12:34:14,117 p=43763 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:34:14,117 p=43763 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:34:14,137 p=43763 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:34:14,137 p=43763 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:34:14,143 p=43763 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies (RedHat-based)] *****************************************************************
+2025-04-01 12:34:14,988 p=43763 u=ansible n=ansible | fatal: [172.31.26.181]: FAILED! => {"changed": false, "msg": "No package matching 'apr' is available"}
+2025-04-01 12:34:15,034 p=43763 u=ansible n=ansible | fatal: [172.31.25.224]: FAILED! => {"changed": false, "msg": "No package matching 'apr' is available"}
+2025-04-01 12:34:15,035 p=43763 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************
+2025-04-01 12:34:15,036 p=43763 u=ansible n=ansible | 172.31.25.224              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:34:15,036 p=43763 u=ansible n=ansible | 172.31.26.181              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:34:57,573 p=44396 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************************
+2025-04-01 12:34:57,584 p=44396 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************
+2025-04-01 12:34:58,823 p=44396 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:34:58,823 p=44396 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:34:58,837 p=44396 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:34:58,837 p=44396 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:34:58,844 p=44396 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies (RedHat-based)] *****************************************************************
+2025-04-01 12:34:59,697 p=44396 u=ansible n=ansible | fatal: [172.31.26.181]: FAILED! => {"changed": false, "msg": "No package matching 'apr' is available"}
+2025-04-01 12:34:59,740 p=44396 u=ansible n=ansible | fatal: [172.31.25.224]: FAILED! => {"changed": false, "msg": "No package matching 'apr' is available"}
+2025-04-01 12:34:59,741 p=44396 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************
+2025-04-01 12:34:59,742 p=44396 u=ansible n=ansible | 172.31.25.224              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:34:59,742 p=44396 u=ansible n=ansible | 172.31.26.181              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:37:08,157 p=45457 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************************
+2025-04-01 12:37:08,165 p=45457 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************
+2025-04-01 12:37:10,247 p=45457 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:37:10,247 p=45457 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:37:10,268 p=45457 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:37:10,269 p=45457 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:37:10,274 p=45457 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies (RedHat-based)] *****************************************************************
+2025-04-01 12:37:11,137 p=45457 u=ansible n=ansible | fatal: [172.31.26.181]: FAILED! => {"changed": false, "msg": "No package matching 'pcre' is available"}
+2025-04-01 12:37:11,171 p=45457 u=ansible n=ansible | fatal: [172.31.25.224]: FAILED! => {"changed": false, "msg": "No package matching 'pcre' is available"}
+2025-04-01 12:37:11,172 p=45457 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************
+2025-04-01 12:37:11,173 p=45457 u=ansible n=ansible | 172.31.25.224              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:37:11,173 p=45457 u=ansible n=ansible | 172.31.26.181              : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:39:24,758 p=46388 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************************
+2025-04-01 12:39:24,766 p=46388 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************
+2025-04-01 12:39:26,803 p=46388 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:39:26,803 p=46388 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:39:26,827 p=46388 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:39:26,827 p=46388 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:39:26,833 p=46388 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies (RedHat-based)] *****************************************************************
+2025-04-01 12:39:33,037 p=46388 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 12:39:33,304 p=46388 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 12:39:33,310 p=46388 u=ansible n=ansible | TASK [httpd-installation : Download Apache HTTPD source code] ****************************************************************************
+2025-04-01 12:39:34,208 p=46388 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:39:34,223 p=46388 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:39:34,231 p=46388 u=ansible n=ansible | TASK [httpd-installation : Extract Apache source code] ***********************************************************************************
+2025-04-01 12:39:35,846 p=46388 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:39:37,035 p=46388 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:39:37,044 p=46388 u=ansible n=ansible | TASK [httpd-installation : Configure Apache for custom installation] *********************************************************************
+2025-04-01 12:39:42,334 p=46388 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 12:39:42,517 p=46388 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 12:39:42,524 p=46388 u=ansible n=ansible | TASK [httpd-installation : Compile Apache HTTPD] *****************************************************************************************
+2025-04-01 12:40:46,037 p=46388 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 12:40:48,305 p=46388 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 12:40:48,310 p=46388 u=ansible n=ansible | TASK [httpd-installation : Install Apache HTTPD] *****************************************************************************************
+2025-04-01 12:41:05,745 p=46388 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 12:41:06,326 p=46388 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 12:41:06,339 p=46388 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************
+2025-04-01 12:41:06,340 p=46388 u=ansible n=ansible | 172.31.25.224              : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:41:06,340 p=46388 u=ansible n=ansible | 172.31.26.181              : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:51:15,657 p=48318 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************************
+2025-04-01 12:51:15,665 p=48318 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************
+2025-04-01 12:51:17,688 p=48318 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:51:17,689 p=48318 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:51:17,724 p=48318 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:51:17,724 p=48318 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:51:17,729 p=48318 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies (RedHat-based)] *****************************************************************
+2025-04-01 12:51:17,753 p=48318 u=ansible n=ansible | skipping: [172.31.26.181]
+2025-04-01 12:51:17,763 p=48318 u=ansible n=ansible | skipping: [172.31.25.224]
+2025-04-01 12:51:17,770 p=48318 u=ansible n=ansible | TASK [httpd-installation : Download Apache HTTPD source code] ****************************************************************************
+2025-04-01 12:51:18,658 p=48318 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:51:18,677 p=48318 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:51:18,683 p=48318 u=ansible n=ansible | TASK [httpd-installation : Extract Apache source code] ***********************************************************************************
+2025-04-01 12:51:20,737 p=48318 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 12:51:21,926 p=48318 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 12:51:21,933 p=48318 u=ansible n=ansible | TASK [httpd-installation : Configure Apache for custom installation] *********************************************************************
+2025-04-01 12:51:27,269 p=48318 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 12:51:27,379 p=48318 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 12:51:27,385 p=48318 u=ansible n=ansible | TASK [httpd-installation : Compile Apache HTTPD] *****************************************************************************************
+2025-04-01 12:51:29,152 p=48318 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 12:51:29,224 p=48318 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 12:51:29,230 p=48318 u=ansible n=ansible | TASK [httpd-installation : Install Apache HTTPD] *****************************************************************************************
+2025-04-01 12:51:34,606 p=48318 u=ansible n=ansible |  [ERROR]: User interrupted execution
+
+2025-04-01 12:56:09,695 p=50255 u=ansible n=ansible | [WARNING]: Unable to parse /etc/ansible/hosts[0] as an inventory source
+
+2025-04-01 12:56:09,696 p=50255 u=ansible n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-04-01 12:56:09,700 p=50255 u=ansible n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-04-01 12:56:09,855 p=50255 u=ansible n=ansible | PLAY [Print gathered facts] **************************************************************************************************************
+2025-04-01 12:56:09,856 p=50255 u=ansible n=ansible | skipping: no hosts matched
+2025-04-01 12:56:09,856 p=50255 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************
+2025-04-01 12:57:16,658 p=50705 u=ansible n=ansible | {
+    "Node1": {
+        "hosts": [
+            "172.31.26.181"
+        ]
+    },
+    "Node2": {
+        "hosts": [
+            "172.31.25.224"
+        ]
+    },
+    "_meta": {
+        "hostvars": {}
+    },
+    "all": {
+        "children": [
+            "ungrouped",
+            "Node1",
+            "Node2"
+        ]
+    }
+}
+2025-04-01 12:57:51,195 p=50945 u=ansible n=ansible | PLAY [Print gathered facts] **************************************************************************************************************
+2025-04-01 12:57:51,205 p=50945 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************
+2025-04-01 12:57:53,087 p=50945 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:57:53,089 p=50945 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:57:53,098 p=50945 u=ansible n=ansible | TASK [Show all gathered facts] ***********************************************************************************************************
+2025-04-01 12:57:53,140 p=50945 u=ansible n=ansible | ok: [172.31.26.181] => {
+    "ansible_facts": {
+        "all_ipv4_addresses": [
+            "172.31.26.181"
+        ],
+        "all_ipv6_addresses": [
+            "fe80::8ff:e8ff:fe7b:b715"
+        ],
+        "ansible_local": {},
+        "apparmor": {
+            "status": "enabled"
+        },
+        "architecture": "x86_64",
+        "bios_date": "08/24/2006",
+        "bios_vendor": "Xen",
+        "bios_version": "4.11.amazon",
+        "board_asset_tag": "NA",
+        "board_name": "NA",
+        "board_serial": "NA",
+        "board_vendor": "NA",
+        "board_version": "NA",
+        "chassis_asset_tag": "NA",
+        "chassis_serial": "NA",
+        "chassis_vendor": "Xen",
+        "chassis_version": "NA",
+        "cmdline": {
+            "BOOT_IMAGE": "/vmlinuz-6.8.0-1024-aws",
+            "console": "ttyS0",
+            "nvme_core.io_timeout": "4294967295",
+            "panic": "-1",
+            "ro": true,
+            "root": "PARTUUID=a8ef6bc6-0748-47d7-a4a8-b126c21ff84c"
+        },
+        "date_time": {
+            "date": "2025-04-01",
+            "day": "01",
+            "epoch": "1743512272",
+            "epoch_int": "1743512272",
+            "hour": "12",
+            "iso8601": "2025-04-01T12:57:52Z",
+            "iso8601_basic": "20250401T125752660310",
+            "iso8601_basic_short": "20250401T125752",
+            "iso8601_micro": "2025-04-01T12:57:52.660310Z",
+            "minute": "57",
+            "month": "04",
+            "second": "52",
+            "time": "12:57:52",
+            "tz": "UTC",
+            "tz_dst": "UTC",
+            "tz_offset": "+0000",
+            "weekday": "Tuesday",
+            "weekday_number": "2",
+            "weeknumber": "13",
+            "year": "2025"
+        },
+        "default_ipv4": {
+            "address": "172.31.26.181",
+            "alias": "enX0",
+            "broadcast": "",
+            "gateway": "172.31.16.1",
+            "interface": "enX0",
+            "macaddress": "0a:ff:e8:7b:b7:15",
+            "mtu": 9001,
+            "netmask": "255.255.240.0",
+            "network": "172.31.16.0",
+            "prefix": "20",
+            "type": "ether"
+        },
+        "default_ipv6": {},
+        "device_links": {
+            "ids": {},
+            "labels": {
+                "xvda1": [
+                    "cloudimg-rootfs"
+                ],
+                "xvda15": [
+                    "UEFI"
+                ],
+                "xvda16": [
+                    "BOOT"
+                ]
+            },
+            "masters": {},
+            "uuids": {
+                "xvda1": [
+                    "abc14a03-b423-456c-b531-def4a6ed6dc5"
+                ],
+                "xvda15": [
+                    "E27E-E2BB"
+                ],
+                "xvda16": [
+                    "2aeda221-cde7-4cff-aa4c-e3f564d1e144"
+                ]
+            }
+        },
+        "devices": {
+            "loop0": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "53912",
+                "sectorsize": "512",
+                "size": "26.32 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop1": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "151328",
+                "sectorsize": "512",
+                "size": "73.89 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop2": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "91008",
+                "sectorsize": "512",
+                "size": "44.44 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop3": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "91024",
+                "sectorsize": "512",
+                "size": "44.45 MB",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop4": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop5": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "512",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop6": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "512",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop7": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "512",
+                "vendor": null,
+                "virtual": 1
+            },
+            "xvda": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {
+                    "xvda1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [],
+                            "labels": [
+                                "cloudimg-rootfs"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "abc14a03-b423-456c-b531-def4a6ed6dc5"
+                            ]
+                        },
+                        "sectors": "14677983",
+                        "sectorsize": 512,
+                        "size": "7.00 GB",
+                        "start": "2099200",
+                        "uuid": "abc14a03-b423-456c-b531-def4a6ed6dc5"
+                    },
+                    "xvda14": {
+                        "holders": [],
+                        "links": {
+                            "ids": [],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": []
+                        },
+                        "sectors": "8192",
+                        "sectorsize": 512,
+                        "size": "4.00 MB",
+                        "start": "2048",
+                        "uuid": null
+                    },
+                    "xvda15": {
+                        "holders": [],
+                        "links": {
+                            "ids": [],
+                            "labels": [
+                                "UEFI"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "E27E-E2BB"
+                            ]
+                        },
+                        "sectors": "217088",
+                        "sectorsize": 512,
+                        "size": "106.00 MB",
+                        "start": "10240",
+                        "uuid": "E27E-E2BB"
+                    },
+                    "xvda16": {
+                        "holders": [],
+                        "links": {
+                            "ids": [],
+                            "labels": [
+                                "BOOT"
+                            ],
+                            "masters": [],
+                            "uuids": [
+                                "2aeda221-cde7-4cff-aa4c-e3f564d1e144"
+                            ]
+                        },
+                        "sectors": "1869825",
+                        "sectorsize": 512,
+                        "size": "913.00 MB",
+                        "start": "227328",
+                        "uuid": "2aeda221-cde7-4cff-aa4c-e3f564d1e144"
+                    }
+                },
+                "removable": "0",
+                "rotational": "0",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "16777216",
+                "sectorsize": "512",
+                "size": "8.00 GB",
+                "support_discard": "512",
+                "vendor": null,
+                "virtual": 1
+            }
+        },
+        "discovered_interpreter_python": "/usr/bin/python3.12",
+        "distribution": "Ubuntu",
+        "distribution_file_parsed": true,
+        "distribution_file_path": "/etc/os-release",
+        "distribution_file_variety": "Debian",
+        "distribution_major_version": "24",
+        "distribution_release": "noble",
+        "distribution_version": "24.04",
+        "dns": {
+            "nameservers": [
+                "127.0.0.53"
+            ],
+            "options": {
+                "edns0": true,
+                "trust-ad": true
+            },
+            "search": [
+                "ec2.internal"
+            ]
+        },
+        "domain": "ec2.internal",
+        "effective_group_id": 0,
+        "effective_user_id": 0,
+        "enX0": {
+            "active": true,
+            "device": "enX0",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "off [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "netns_local": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "off [fixed]",
+                "tx_checksum_ipv4": "on [fixed]",
+                "tx_checksum_ipv6": "on",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "on [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off",
+                "tx_tcp_segmentation": "on",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "172.31.26.181",
+                "broadcast": "",
+                "netmask": "255.255.240.0",
+                "network": "172.31.16.0",
+                "prefix": "20"
+            },
+            "ipv6": [
+                {
+                    "address": "fe80::8ff:e8ff:fe7b:b715",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "0a:ff:e8:7b:b7:15",
+            "mtu": 9001,
+            "pciid": "vif-0",
+            "promisc": false,
+            "timestamping": [],
+            "type": "ether"
+        },
+        "env": {
+            "HOME": "/root",
+            "LANG": "C.UTF-8",
+            "LOGNAME": "root",
+            "MAIL": "/var/mail/root",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin",
+            "PWD": "/home/ansible",
+            "SHELL": "/bin/bash",
+            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-oxduavsdstiydavcehadfqwyyhtofwns ; /usr/bin/python3.12 /home/ansible/.ansible/tmp/ansible-tmp-1743512271.9545348-50949-20095511366403/AnsiballZ_setup.py",
+            "SUDO_GID": "1001",
+            "SUDO_UID": "1001",
+            "SUDO_USER": "ansible",
+            "TERM": "xterm",
+            "USER": "root"
+        },
+        "fibre_channel_wwn": [],
+        "fips": false,
+        "form_factor": "Other",
+        "fqdn": "ip-172-31-26-181.ec2.internal",
+        "gather_subset": [
+            "all"
+        ],
+        "hostname": "ip-172-31-26-181",
+        "hostnqn": "",
+        "interfaces": [
+            "lo",
+            "enX0"
+        ],
+        "is_chroot": false,
+        "iscsi_iqn": "",
+        "kernel": "6.8.0-1024-aws",
+        "kernel_version": "#26-Ubuntu SMP Tue Feb 18 17:22:37 UTC 2025",
+        "lo": {
+            "active": true,
+            "device": "lo",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hsr_dup_offload": "off [fixed]",
+                "hsr_fwd_offload": "off [fixed]",
+                "hsr_tag_ins_offload": "off [fixed]",
+                "hsr_tag_rm_offload": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "on [fixed]",
+                "macsec_hw_offload": "off [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_gro_list": "off",
+                "rx_udp_gro_forwarding": "off",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "on [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_list": "on",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "on [fixed]",
+                "tx_nocache_copy": "off [fixed]",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "on [fixed]",
+                "tx_sctp_segmentation": "on",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                "tx_udp_segmentation": "on",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "on [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "127.0.0.1",
+                "broadcast": "",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0",
+                "prefix": "8"
+            },
+            "ipv6": [
+                {
+                    "address": "::1",
+                    "prefix": "128",
+                    "scope": "host"
+                }
+            ],
+            "mtu": 65536,
+            "promisc": false,
+            "timestamping": [],
+            "type": "loopback"
+        },
+        "loadavg": {
+            "15m": 0.03759765625,
+            "1m": 0.0,
+            "5m": 0.01953125
+        },
+        "locally_reachable_ips": {
+            "ipv4": [
+                "127.0.0.0/8",
+                "127.0.0.1",
+                "172.31.26.181"
+            ],
+            "ipv6": [
+                "::1",
+                "fe80::8ff:e8ff:fe7b:b715"
+            ]
+        },
+        "lsb": {
+            "codename": "noble",
+            "description": "Ubuntu 24.04.2 LTS",
+            "id": "Ubuntu",
+            "major_release": "24",
+            "release": "24.04"
+        },
+        "lvm": {
+            "lvs": {},
+            "pvs": {},
+            "vgs": {}
+        },
+        "machine": "x86_64",
+        "machine_id": "ec2b372fcc94ed97443248b5ce68ee64",
+        "memfree_mb": 159,
+        "memory_mb": {
+            "nocache": {
+                "free": 1603,
+                "used": 360
+            },
+            "real": {
+                "free": 159,
+                "total": 1963,
+                "used": 1804
+            },
+            "swap": {
+                "cached": 0,
+                "free": 0,
+                "total": 0,
+                "used": 0
+            }
+        },
+        "memtotal_mb": 1963,
+        "module_setup": true,
+        "mounts": [
+            {
+                "block_available": 1017171,
+                "block_size": 4096,
+                "block_total": 1758594,
+                "block_used": 741423,
+                "device": "/dev/root",
+                "dump": 0,
+                "fstype": "ext4",
+                "inode_available": 788324,
+                "inode_total": 917504,
+                "inode_used": 129180,
+                "mount": "/",
+                "options": "rw,relatime,discard,errors=remount-ro,commit=30",
+                "passno": 0,
+                "size_available": 4166332416,
+                "size_total": 7203201024,
+                "uuid": "abc14a03-b423-456c-b531-def4a6ed6dc5"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 211,
+                "block_used": 211,
+                "device": "/dev/loop0",
+                "dump": 0,
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 14,
+                "inode_used": 14,
+                "mount": "/snap/amazon-ssm-agent/9881",
+                "options": "ro,nodev,relatime,errors=continue,threads=single",
+                "passno": 0,
+                "size_available": 0,
+                "size_total": 27656192,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 592,
+                "block_used": 592,
+                "device": "/dev/loop1",
+                "dump": 0,
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 14262,
+                "inode_used": 14262,
+                "mount": "/snap/core22/1748",
+                "options": "ro,nodev,relatime,errors=continue,threads=single",
+                "passno": 0,
+                "size_available": 0,
+                "size_total": 77594624,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 356,
+                "block_used": 356,
+                "device": "/dev/loop2",
+                "dump": 0,
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 608,
+                "inode_used": 608,
+                "mount": "/snap/snapd/23545",
+                "options": "ro,nodev,relatime,errors=continue,threads=single",
+                "passno": 0,
+                "size_available": 0,
+                "size_total": 46661632,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 0,
+                "block_size": 131072,
+                "block_total": 356,
+                "block_used": 356,
+                "device": "/dev/loop3",
+                "dump": 0,
+                "fstype": "squashfs",
+                "inode_available": 0,
+                "inode_total": 608,
+                "inode_used": 608,
+                "mount": "/snap/snapd/23771",
+                "options": "ro,nodev,relatime,errors=continue,threads=single",
+                "passno": 0,
+                "size_available": 0,
+                "size_total": 46661632,
+                "uuid": "N/A"
+            },
+            {
+                "block_available": 174619,
+                "block_size": 4096,
+                "block_total": 225380,
+                "block_used": 50761,
+                "device": "/dev/xvda16",
+                "dump": 0,
+                "fstype": "ext4",
+                "inode_available": 57891,
+                "inode_total": 58496,
+                "inode_used": 605,
+                "mount": "/boot",
+                "options": "rw,relatime",
+                "passno": 0,
+                "size_available": 715239424,
+                "size_total": 923156480,
+                "uuid": "2aeda221-cde7-4cff-aa4c-e3f564d1e144"
+            },
+            {
+                "block_available": 201172,
+                "block_size": 512,
+                "block_total": 213663,
+                "block_used": 12491,
+                "device": "/dev/xvda15",
+                "dump": 0,
+                "fstype": "vfat",
+                "inode_available": 0,
+                "inode_total": 0,
+                "inode_used": 0,
+                "mount": "/boot/efi",
+                "options": "rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro",
+                "passno": 0,
+                "size_available": 103000064,
+                "size_total": 109395456,
+                "uuid": "E27E-E2BB"
+            }
+        ],
+        "nodename": "ip-172-31-26-181",
+        "os_family": "Debian",
+        "pkg_mgr": "apt",
+        "proc_cmdline": {
+            "BOOT_IMAGE": "/vmlinuz-6.8.0-1024-aws",
+            "console": [
+                "tty1",
+                "ttyS0"
+            ],
+            "nvme_core.io_timeout": "4294967295",
+            "panic": "-1",
+            "ro": true,
+            "root": "PARTUUID=a8ef6bc6-0748-47d7-a4a8-b126c21ff84c"
+        },
+        "processor": [
+            "0",
+            "GenuineIntel",
+            "Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz"
+        ],
+        "processor_cores": 1,
+        "processor_count": 1,
+        "processor_nproc": 1,
+        "processor_threads_per_core": 1,
+        "processor_vcpus": 1,
+        "product_name": "HVM domU",
+        "product_serial": "ec2b372f-cc94-ed97-4432-48b5ce68ee64",
+        "product_uuid": "ec2b372f-cc94-ed97-4432-48b5ce68ee64",
+        "product_version": "4.11.amazon",
+        "python": {
+            "executable": "/usr/bin/python3.12",
+            "has_sslcontext": true,
+            "type": "cpython",
+            "version": {
+                "major": 3,
+                "micro": 3,
+                "minor": 12,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                3,
+                12,
+                3,
+                "final",
+                0
+            ]
+        },
+        "python_version": "3.12.3",
+        "real_group_id": 0,
+        "real_user_id": 0,
+        "selinux": {
+            "status": "disabled"
+        },
+        "selinux_python_present": true,
+        "service_mgr": "systemd",
+        "ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMgugIOes7istXWPSkAvT+vNL0jlX3J/NlqxYGa7igPeTXDedrxMR+hcf7E/Ltzbx/YqvjPwS8cVaiEp0Kt+MUg=",
+        "ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+        "ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIOtCfBs8t9p3KoFsjEd/HKKlovYRFwri2w/QaINxovSW",
+        "ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+        "ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDJ4H7Y6N4n/y46O57aeSxLVOV7mH9PqefGcXfjWP2GJanK5BeRj64uH//uu8v43knvfohLkDfBg2q4aCFvkYYqE5y5ucealuY3SQVudDUCEX0YyY3g59+Auwq4rTDRl3DEtkrw7n9d/VIj5/gCVJmMiKCZjOYUZxHK9cStNUwbCOdWHvM2rMdS7Wf3xTux62tEmb+8yCd8DercbFQ4xkskWuXLrUsHn8VjhyjH3MWcvuYXxIXTbvkE7wfy8DIks/gCnsoHApyDH5N+luldXm8jEUeJG86oq6RWw+SmgXrJ8UdMfaptpC+ZlmPo+OVOhO/yWeHIpPvk4S6zSGMzDs+oS4tiLokq4hli37tVSoLw8uW0cqwW0UKEuTqqkeq5qF9H9peN83rJvJR/fTdqhg4B0y0YF+kAjITTnkHGJGoPLr96QG/JPEr4UHvwW4PDkesIRAonJhDkswkOxQzhymaSSqL+t+v9HIFB/pF79Efa/zN2MTO6XBTS6MUPjhvsyOM=",
+        "ssh_host_key_rsa_public_keytype": "ssh-rsa",
+        "swapfree_mb": 0,
+        "swaptotal_mb": 0,
+        "system": "Linux",
+        "system_capabilities": [],
+        "system_capabilities_enforced": "False",
+        "system_vendor": "Xen",
+        "uptime_seconds": 15984,
+        "user_dir": "/root",
+        "user_gecos": "root",
+        "user_gid": 0,
+        "user_id": "root",
+        "user_shell": "/bin/bash",
+        "user_uid": 0,
+        "userspace_architecture": "x86_64",
+        "userspace_bits": "64",
+        "virtualization_role": "guest",
+        "virtualization_tech_guest": [
+            "xen"
+        ],
+        "virtualization_tech_host": [],
+        "virtualization_type": "xen"
+    }
+}
+2025-04-01 12:57:53,141 p=50945 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************
+2025-04-01 12:57:53,141 p=50945 u=ansible n=ansible | 172.31.26.181              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 12:59:56,573 p=51754 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************************
+2025-04-01 12:59:56,581 p=51754 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************
+2025-04-01 12:59:58,608 p=51754 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:59:58,609 p=51754 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:59:58,631 p=51754 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 12:59:58,632 p=51754 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:59:58,637 p=51754 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies (RedHat-based)] *****************************************************************
+2025-04-01 12:59:58,659 p=51754 u=ansible n=ansible | skipping: [172.31.26.181]
+2025-04-01 12:59:58,667 p=51754 u=ansible n=ansible | skipping: [172.31.25.224]
+2025-04-01 12:59:58,673 p=51754 u=ansible n=ansible | TASK [httpd-installation : Download Apache HTTPD source code] ****************************************************************************
+2025-04-01 12:59:59,573 p=51754 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 12:59:59,574 p=51754 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 12:59:59,583 p=51754 u=ansible n=ansible | TASK [httpd-installation : Extract Apache source code] ***********************************************************************************
+2025-04-01 13:00:00,844 p=51754 u=ansible n=ansible |  [ERROR]: User interrupted execution
+
+2025-04-01 13:02:01,076 p=52612 u=ansible n=ansible | PLAY [Print gathered facts] **************************************************************************************************************
+2025-04-01 13:02:01,086 p=52612 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************
+2025-04-01 13:02:03,085 p=52612 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 13:02:03,086 p=52612 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 13:02:03,091 p=52612 u=ansible n=ansible | TASK [Show all gathered facts] ***********************************************************************************************************
+2025-04-01 13:02:03,108 p=52612 u=ansible n=ansible | ok: [172.31.26.181] => {
+    "ansible_os_family": "Debian"
+}
+2025-04-01 13:02:03,109 p=52612 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************
+2025-04-01 13:02:03,110 p=52612 u=ansible n=ansible | 172.31.26.181              : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 13:02:26,513 p=52800 u=ansible n=ansible | PLAY [HTTPD Installation Playbook] *******************************************************************************************************
+2025-04-01 13:02:26,521 p=52800 u=ansible n=ansible | TASK [Gathering Facts] *******************************************************************************************************************
+2025-04-01 13:02:27,799 p=52800 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.26.181 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 13:02:27,800 p=52800 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 13:02:28,348 p=52800 u=ansible n=ansible | [WARNING]: Platform linux on host 172.31.25.224 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2025-04-01 13:02:28,349 p=52800 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 13:02:28,354 p=52800 u=ansible n=ansible | TASK [httpd-installation : Install required dependencies (RedHat-based)] *****************************************************************
+2025-04-01 13:02:29,459 p=52800 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 13:02:29,530 p=52800 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 13:02:29,538 p=52800 u=ansible n=ansible | TASK [httpd-installation : Download Apache HTTPD source code] ****************************************************************************
+2025-04-01 13:02:30,421 p=52800 u=ansible n=ansible | ok: [172.31.26.181]
+2025-04-01 13:02:30,437 p=52800 u=ansible n=ansible | ok: [172.31.25.224]
+2025-04-01 13:02:30,444 p=52800 u=ansible n=ansible | TASK [httpd-installation : Extract Apache source code] ***********************************************************************************
+2025-04-01 13:02:32,508 p=52800 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 13:02:32,532 p=52800 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 13:02:32,538 p=52800 u=ansible n=ansible | TASK [httpd-installation : Configure Apache for custom installation] *********************************************************************
+2025-04-01 13:02:37,830 p=52800 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 13:02:38,008 p=52800 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 13:02:38,013 p=52800 u=ansible n=ansible | TASK [httpd-installation : Compile Apache HTTPD] *****************************************************************************************
+2025-04-01 13:02:39,790 p=52800 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 13:02:39,867 p=52800 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 13:02:39,874 p=52800 u=ansible n=ansible | TASK [httpd-installation : Install Apache HTTPD] *****************************************************************************************
+2025-04-01 13:02:56,464 p=52800 u=ansible n=ansible | changed: [172.31.26.181]
+2025-04-01 13:02:56,919 p=52800 u=ansible n=ansible | changed: [172.31.25.224]
+2025-04-01 13:02:56,928 p=52800 u=ansible n=ansible | PLAY RECAP *******************************************************************************************************************************
+2025-04-01 13:02:56,928 p=52800 u=ansible n=ansible | 172.31.25.224              : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-04-01 13:02:56,929 p=52800 u=ansible n=ansible | 172.31.26.181              : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

@@ -1,0 +1,46 @@
+---
+- name: Install required dependencies (RedHat-based)
+  apt:
+    name:
+      - gcc
+      - make
+      - perl
+      - wget
+      - tar
+      - libapr1
+      - libapr1-dev
+      - libaprutil1
+      - libaprutil1-dev
+      - libpcre3
+      - libpcre3-dev
+      - openssl
+      - libssl-dev
+      - libexpat1-dev
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Download Apache HTTPD source code
+  get_url:
+    url: "https://downloads.apache.org/httpd/httpd-{{ httpd_version }}.tar.gz"
+    dest: "/tmp/httpd-{{ httpd_version }}.tar.gz"
+
+- name: Extract Apache source code
+  unarchive:
+    src: "/tmp/httpd-{{ httpd_version }}.tar.gz"
+    dest: "/tmp"
+    remote_src: yes
+
+- name: Configure Apache for custom installation
+  command:
+    cmd: "./configure --prefix={{ httpd_install_path }} --enable-mods-shared=all"
+    chdir: "/tmp/httpd-{{ httpd_version }}"
+
+- name: Compile Apache HTTPD
+  command:
+    cmd: "make"
+    chdir: "/tmp/httpd-{{ httpd_version }}"
+
+- name: Install Apache HTTPD
+  command:
+    cmd: "make install"
+    chdir: "/tmp/httpd-{{ httpd_version }}"
