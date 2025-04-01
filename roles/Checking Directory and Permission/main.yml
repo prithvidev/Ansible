@@ -1,0 +1,19 @@
+---
+- name: Check if destination directory exists
+  stat:
+    path: /home/ansible/inst1
+  register: dir_status
+
+- name: Ensure destination directory exists with correct ownership and permissions
+  file:
+    path: /home/ansible/inst1
+    state: directory
+    owner: ansible
+    group: ansible
+    mode: '0755'
+  when: 
+    - dir_status.stat.exists is defined  # Ensure variable is valid
+    - dir_status.stat.exists             # Run only if directory exists
+    - (dir_status.stat.pw_name is defined and dir_status.stat.pw_name != "ansible") 
+      or (dir_status.stat.gr_name is defined and dir_status.stat.gr_name != "ansible") 
+      or (dir_status.stat.mode is defined and dir_status.stat.mode != "0755")
