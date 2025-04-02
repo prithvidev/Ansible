@@ -1,0 +1,4 @@
+---
+- name: Start HTTPD Server
+  command:
+    cmd: "{{ httpd_install_path }}/bin/apachectl start"

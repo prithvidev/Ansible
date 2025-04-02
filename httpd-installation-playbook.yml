@@ -5,3 +5,6 @@
   become: yes  # Ensures sudo privileges for package installation
   roles:
     - httpd-installation
+    - checking-directory-and-permission
+    - copy-files
+    - start-httpd
