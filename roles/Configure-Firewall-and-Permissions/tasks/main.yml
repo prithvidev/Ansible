@@ -1,0 +1,57 @@
+---
+- name: Allow port 8080 in UFW
+  ufw:
+    rule: allow
+    port: "8080"
+    proto: tcp
+
+- name: Reload UFW
+  command: ufw reload
+  changed_when: false
+
+- name: Allow Apache Full access in UFW
+  ufw:
+    rule: allow
+    name: "Apache Full"
+
+- name: Enable UFW
+  command: ufw enable
+  changed_when: false
+
+#- name: Display UFW status
+# command: ufw status verbose
+#  register: ufw_status
+#  changed_when: false
+
+- name: Print UFW status
+  debug:
+    var: ufw_status.stdout_lines
+
+- name: Ensure correct permissions for Apache directories
+  file:
+    path: "{{ item.path }}"
+    state: directory
+    mode: "{{ item.mode }}"
+  loop:
+    - { path: "/home", mode: "0755" }
+    - { path: "/home/ansible", mode: "0755" }
+    - { path: "/home/ansible/inst1", mode: "0755" }
+
+- name: Set correct permissions for Apache web files
+  file:
+    path: "/home/ansible/inst1/htdocs"
+    state: directory
+    mode: "0755"
+    recurse: yes
+
+- name: Set ownership for Apache directories
+  file:
+    path: "/home/ansible/inst1"
+    state: directory
+    owner: ansible
+    group: ansible
+    recurse: yes
+
+- name: Restart Apache
+  command: /home/ansible/inst1/bin/apachectl restart
+  changed_when: false

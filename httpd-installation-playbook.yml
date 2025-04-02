@@ -7,4 +7,5 @@
     - httpd-installation
     - checking-directory-and-permission
     - copy-files
+    - Configure-Firewall-and-Permissions
     - start-httpd
